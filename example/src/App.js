@@ -1,10 +1,7 @@
 import React from 'react'
 
-import { ExampleComponent } from 'redux-by-levels'
-import 'redux-by-levels/dist/index.css'
-
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <h1>Hello World</h1>
 }
 
 export default App
