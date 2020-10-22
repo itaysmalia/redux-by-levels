@@ -5,3 +5,4 @@ export * from "./useRBLRootState";
 export * from "./useRBLRootValue";
 export * from "./useRBLRootSetter";
 export * from "./useSyncRBL";
+export * from "./useSyncRBLRoot"
