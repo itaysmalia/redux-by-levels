@@ -31,10 +31,10 @@ const RBLProviderExample = () => (
     <RBLProvider level="foo">
         <RBLProvider level={["bar","baz"]}>
             <RBLProvider level={0}>
-                <ComponentThatControlsFirstBaz>
+                <ComponentThatControlsFirstBaz />
             </RBLProvider>
             <RBLProvider level={1}>
-                <ComponentThatControlsSecondBaz>
+                <ComponentThatControlsSecondBaz />
             </RBLProvider>
         </RBLProvider>
     </RBLProvider>
