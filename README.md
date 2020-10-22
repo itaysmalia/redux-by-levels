@@ -1,8 +1,10 @@
 # redux-by-levels
 
-> Made with create-react-library
+> Manage redux state with levels, based on context API.
 
 [![NPM](https://img.shields.io/npm/v/redux-by-levels.svg)](https://www.npmjs.com/package/redux-by-levels) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+### go to the [npm page](https://www.npmjs.com/package/redux-by-levels)
 
 ## Install
 
