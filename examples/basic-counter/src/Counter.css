@@ -1,0 +1,13 @@
+.counter__button {
+  outline: none;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  background-color: #deb887;
+  color: rgb(24, 86, 201);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.counter__button:hover {
+  background-color: #f7d2a2;
+}
