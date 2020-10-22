@@ -1,6 +1,6 @@
 import { getByLevels,setByLevels } from "../";
 
-export const getReduxHirReducer = (initialState = {}, levelsAfterRoot = 0) => {
+export const getRBLReducer = (initialState = {}, levelsAfterRoot = 0) => {
   const reducer = (state = initialState, action) => {
     const levels = action?.payload?.levels?.slice(levelsAfterRoot);
     if (levels) {
