@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/redux-by-levels/static/css/main.3bdfd28b.chunk.css",
-    "main.js": "/redux-by-levels/static/js/main.99bc6e73.chunk.js",
-    "main.js.map": "/redux-by-levels/static/js/main.99bc6e73.chunk.js.map",
-    "runtime-main.js": "/redux-by-levels/static/js/runtime-main.e5577463.js",
-    "runtime-main.js.map": "/redux-by-levels/static/js/runtime-main.e5577463.js.map",
-    "static/js/2.47911ccb.chunk.js": "/redux-by-levels/static/js/2.47911ccb.chunk.js",
-    "static/js/2.47911ccb.chunk.js.map": "/redux-by-levels/static/js/2.47911ccb.chunk.js.map",
-    "index.html": "/redux-by-levels/index.html",
-    "precache-manifest.76ba788e8677ca89d5f0ab788e18e86c.js": "/redux-by-levels/precache-manifest.76ba788e8677ca89d5f0ab788e18e86c.js",
-    "service-worker.js": "/redux-by-levels/service-worker.js",
-    "static/css/main.3bdfd28b.chunk.css.map": "/redux-by-levels/static/css/main.3bdfd28b.chunk.css.map",
-    "static/js/2.47911ccb.chunk.js.LICENSE.txt": "/redux-by-levels/static/js/2.47911ccb.chunk.js.LICENSE.txt"
+    "main.css": "/redux-by-levels-docs/static/css/main.3bdfd28b.chunk.css",
+    "main.js": "/redux-by-levels-docs/static/js/main.a96facae.chunk.js",
+    "main.js.map": "/redux-by-levels-docs/static/js/main.a96facae.chunk.js.map",
+    "runtime-main.js": "/redux-by-levels-docs/static/js/runtime-main.7e33fe85.js",
+    "runtime-main.js.map": "/redux-by-levels-docs/static/js/runtime-main.7e33fe85.js.map",
+    "static/js/2.4a3f82b7.chunk.js": "/redux-by-levels-docs/static/js/2.4a3f82b7.chunk.js",
+    "static/js/2.4a3f82b7.chunk.js.map": "/redux-by-levels-docs/static/js/2.4a3f82b7.chunk.js.map",
+    "index.html": "/redux-by-levels-docs/index.html",
+    "precache-manifest.66289eb55eec29f59aa3ac5aa99f93a0.js": "/redux-by-levels-docs/precache-manifest.66289eb55eec29f59aa3ac5aa99f93a0.js",
+    "service-worker.js": "/redux-by-levels-docs/service-worker.js",
+    "static/css/main.3bdfd28b.chunk.css.map": "/redux-by-levels-docs/static/css/main.3bdfd28b.chunk.css.map",
+    "static/js/2.4a3f82b7.chunk.js.LICENSE.txt": "/redux-by-levels-docs/static/js/2.4a3f82b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5577463.js",
-    "static/js/2.47911ccb.chunk.js",
+    "static/js/runtime-main.7e33fe85.js",
+    "static/js/2.4a3f82b7.chunk.js",
     "static/css/main.3bdfd28b.chunk.css",
-    "static/js/main.99bc6e73.chunk.js"
+    "static/js/main.a96facae.chunk.js"
   ]
 }
