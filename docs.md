@@ -22,7 +22,7 @@ combineReducer({ a: combineReducer({ b: getRBLReducer({},2) }) })
 
 | prop  | type                      | optional | Description                                 |
 | ----- | ------------------------- | -------- | ------------------------------------------- |
-| level | array \| string \| number | yes      | the level/s to append to the levels context |
+| level | array \| string \| number | no       | the level/s to append to the levels context |
 
 ### *example*
 ```jsx
@@ -40,6 +40,10 @@ const RBLProviderExample = () => (
     </RBLProvider>
 )
 ```
+
+## `RBLResetter`
+### **`RBLResetter` have no props**
+That provider is used to reset the context level, so you can start again from the reducer root state.
 
 ## `useRBLState`
 ## **props:**
@@ -70,3 +74,20 @@ that returns only the value by the level.
 and:
 ### `useRBLSetter`
 that returns only the setter function. that hook use useful to prevent unnecessary renders if you don't need the value itself, only the option to set it.
+
+## `useRBLRootState`
+That hook working just like `useRBLState`, but it ignores the levels from context and using only the levels passed to the `levels` prop, if nothing will be passed, the hook will control the absolute root state of the reducer.
+you can also use `useRBLRootValue` and `useRBLRootSetter` that works just the same.
+
+
+## `useSyncRBL`
+## **props**
+| prop  | type                      | optional | Description                                                                                        |
+| ----- | ------------------------- | -------- | -------------------------------------------------------------------------------------------------- |
+| value | any                       | no       | the value to listen for and sync it with the value in the state by the levels if the value changed |
+| level | array \| string \| number | yes      | append the level(s) to the context levels then sync the value with this level                      |
+
+## `useSyncRBLRoot`
+The props are just the same like `useSyncRBL`, but this hook will sync it from the root state of the reducer with the level(s) if passed, if not it will sync the value with the root state of the reducer.
+
+# **Thank you for using redux-by-levels :)**
