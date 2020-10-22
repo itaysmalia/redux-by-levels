@@ -13,7 +13,7 @@ npm install --save redux-by-levels
 ```
 
 ## Usage
-
+### full docs at [docs.md](https://github.com/itaysmalia/redux-by-levels/blob/master/docs.md)
 ```jsx
 // store.js
 
