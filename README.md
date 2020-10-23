@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install --save redux-by-levels
+npm install --save redux react-redux redux-by-levels
 ```
 
 ## Usage
