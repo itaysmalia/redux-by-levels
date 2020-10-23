@@ -44,14 +44,14 @@
     "prettier": "^2.0.4",
     "react-dom": "^16.13.1",
     "react": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
     "react-scripts": "^3.4.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "react-redux": "^7.2.1",
-    "ramda": "^0.27.1",
-    "redux": "^4.0.5"
+    "ramda": "^0.27.1"
   }
 }
