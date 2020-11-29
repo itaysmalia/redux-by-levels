@@ -13,48 +13,73 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build:js": "babel src --out-dir dist",
     "start": "babel src --watch --out-dir dist",
-    "prepare": "run-s build",
-    "test": "run-s test:unit test:lint test:build",
-    "test:build": "run-s build",
-    "test:lint": "eslint .",
-    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom"
+    "build": "npm run test:ci && npm run build:js",
+    "test": "jest --watchAll=true --env=jest-environment-jsdom-sixteen --rootDir src",
+    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src",
+    "lint": "eslint './**/*.{js,jsx,ts,tsx}'"
   },
-  "peerDependencies": {
-    "react": "^16.0.0"
+  "husky": {
+    "pre-commit": "lint-staged && eslint --max-warnings 0 && npm run test:ci"
   },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "peerDependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/preset-typescript": "^7.12.1",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@types/jest": "^26.0.15",
+    "@types/lodash": "^4.14.165",
+    "@types/ramda": "^0.27.32",
+    "@types/react": "^16.9.56",
+    "@types/react-redux": "^7.1.11",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
+    "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.7.0",
-    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard": "^16.0.2",
     "eslint-config-standard-react": "^9.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-standard": "^4.0.1",
-    "npm-run-all": "^4.1.5",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "lint-staged": "^10.5.1",
     "prettier": "^2.0.4",
-    "react-dom": "^16.13.1",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
+    "react-scripts": "^3.4.1",
+    "react-test-renderer": "^17.0.1",
     "redux": "^4.0.5",
-    "react-scripts": "^3.4.1"
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
+    "empty": "^0.10.1",
+    "lodash": "^4.17.20",
     "ramda": "^0.27.1"
   }
 }
