@@ -18,13 +18,15 @@
     "build": "npm run test:ci && npm run build:js",
     "test": "jest --watchAll=true --env=jest-environment-jsdom-sixteen --rootDir src",
     "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src",
-    "lint": "eslint './**/*.{js,jsx,ts,tsx}'"
+    "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'"
   },
   "husky": {
-    "pre-commit": "lint-staged && eslint --max-warnings 0 && npm run test:ci"
+    "hooks": {
+      "pre-commit": "lint-staged && eslint --max-warnings 0 && npm run test:ci"
+    }
   },
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write",
       "yarn lint",
       "git add"
