@@ -1,7 +1,7 @@
 {
   "name": "redux-by-levels",
   "homepage": "http://itaysmalia.github.io/redux-by-levels-docs",
-  "version": "1.1.3",
+  "version": "2.0.1",
   "description": "Manage redux state with levels",
   "author": "itaysmalia",
   "license": "MIT",
@@ -9,27 +9,21 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
+  "types": "./index.d.ts",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build:js": "babel src --out-dir dist",
+    "build:js": "rollup -c",
     "start": "babel src --watch --out-dir dist",
     "build": "npm run test:ci && npm run build:js",
     "test": "jest --watchAll=true --env=jest-environment-jsdom-sixteen --rootDir src",
-    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src",
-    "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'"
+    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && eslint --max-warnings 0 && npm run test:ci"
+      "pre-commit": "eslint --max-warnings 0 && npm run test:ci"
     }
-  },
-  "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write",
-      "yarn lint"
-    ]
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -72,11 +66,14 @@
     "react-scripts": "^3.4.1",
     "react-test-renderer": "^17.0.1",
     "redux": "^4.0.5",
+    "rollup": "^2.34.0",
+    "rollup-plugin-typescript2": "^0.29.0",
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.2"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "dependencies": {
     "empty": "^0.10.1",
