@@ -4,6 +4,6 @@ describe('testing index.js', () => {
     expect(RBL).toBeDefined()
   })
   it('should import all functions from index.js', () => {
-    expect(Object.keys(RBL)).toHaveLength(18)
+    expect(Object.keys(RBL)).toHaveLength(11)
   })
 })

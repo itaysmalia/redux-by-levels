@@ -3,8 +3,8 @@ import React from 'react'
 import { Provider } from 'react-redux'
 
 import { combineReducers, createStore } from 'redux'
+import { getRBLReducer } from '../get-reducer'
 import { RBLProvider } from '../providers'
-import { getRBLReducer } from '../utils'
 import { useRBLRootState } from './useRBLRootState'
 
 interface onlyChildrenProps {

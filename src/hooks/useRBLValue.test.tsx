@@ -4,8 +4,8 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import { useRBLValue } from './useRBLValue'
-import { getRBLReducer } from '../utils'
 import { RBLProvider } from '../providers'
+import { getRBLReducer } from '../get-reducer'
 
 interface onlyChildrenProps {
   children: React.ReactChildren

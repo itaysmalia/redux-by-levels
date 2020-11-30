@@ -1,5 +1,5 @@
 import { RBLLevel } from './../types/rbl-level'
-import { useRBLRootSetter, useRBLRootValue } from '..'
+import { useRBLRootSetter, useRBLRootValue } from '.'
 
 export const useRBLRootState = (
   level?: RBLLevel
