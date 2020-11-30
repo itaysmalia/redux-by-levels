@@ -1,5 +1,5 @@
-// rollup.config.js
 import typescript from 'rollup-plugin-typescript2'
+import del from 'rollup-plugin-delete'
 
 export default {
   input: 'src/index.ts',
@@ -8,5 +8,11 @@ export default {
     format: 'cjs',
     indent: false
   },
-  plugins: [typescript({ useTsconfigDeclarationDir: true })]
+  plugins: [
+    del({ targets: ['./dist', './types'] }),
+    typescript({
+      clean: true,
+      useTsconfigDeclarationDir: true
+    })
+  ]
 }
