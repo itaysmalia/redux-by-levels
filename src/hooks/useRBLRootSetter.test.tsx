@@ -3,9 +3,9 @@ import React from 'react'
 import { renderHook } from '@testing-library/react-hooks'
 import { useRBLRootSetter } from './useRBLRootSetter'
 import { createStore } from 'redux'
-import { getRBLReducer } from '../utils'
 import { Provider } from 'react-redux'
 import { RBLProvider } from '../providers'
+import { getRBLReducer } from '../get-reducer'
 interface onlyChildrenProps {
   children: React.ReactChildren
 }

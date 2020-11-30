@@ -1,7 +1,6 @@
 import { Reducer } from 'redux'
-import { RBLAction } from '../types'
-import { getByLevels } from './getByLevels'
-import { setByLevels } from './setByLevels'
+import { RBLAction } from './types'
+import { getByLevels, setByLevels } from './utils'
 
 const defaultAction = {
   type: 'DEFAULT',

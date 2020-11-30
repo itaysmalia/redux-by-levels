@@ -1,6 +1,6 @@
 import React from 'react'
+import { RBLContext } from '../../redux-by-levels-context'
 
-import { RBLContext } from '../..'
 import { RBLLevel } from '../../types'
 import { toArrayIfNeeded } from '../../utils'
 
@@ -9,10 +9,7 @@ interface RBLProviderProps {
   level?: RBLLevel
 }
 
-export const RBLProvider: React.FunctionComponent<RBLProviderProps> = ({
-  children,
-  level = []
-}: RBLProviderProps) => {
+export const RBLProvider = ({ children, level = [] }: RBLProviderProps) => {
   const levelsToAppend = toArrayIfNeeded(level)
   const levels = React.useContext(RBLContext) || []
   return (

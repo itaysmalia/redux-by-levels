@@ -1,12 +1,10 @@
 import React from 'react'
-import { RBLContext } from '../..'
+import { RBLContext } from '../../redux-by-levels-context'
 
 interface RBLResetterProps {
-	children?: React.ReactNode
+  children: React.ReactNode
 }
 
-export const RBLResetter: React.FunctionComponent<RBLResetterProps> = ({
-	children
-}) => {
-	return <RBLContext.Provider value={[]}>{children}</RBLContext.Provider>
+export const RBLResetter = ({ children }: RBLResetterProps) => {
+  return <RBLContext.Provider value={[]}>{children}</RBLContext.Provider>
 }
