@@ -11,6 +11,7 @@ export default {
   plugins: [
     del({ targets: ['./dist', './types'] }),
     typescript({
+      tsconfig: 'tsconfig.prod.json',
       clean: true,
       useTsconfigDeclarationDir: true
     })
