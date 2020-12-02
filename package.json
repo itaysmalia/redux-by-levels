@@ -1,7 +1,7 @@
 {
   "name": "redux-by-levels",
   "homepage": "http://itaysmalia.github.io/redux-by-levels-docs",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Manage redux state with levels",
   "author": "itaysmalia",
   "license": "MIT",
@@ -80,5 +80,12 @@
     "empty": "^0.10.1",
     "lodash": "^4.17.20",
     "ramda": "^0.27.1"
-  }
+  },
+  "keywords":[
+    "react",
+    "redux",
+    "levels",
+    "global-state",
+    "react-redux"
+  ]
 }
