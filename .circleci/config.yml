@@ -9,7 +9,7 @@ jobs:
       - run:
         name: Installing dependencies
         command: npm i
-       - run:
+      - run:
         name: Running tests
         command: npm run test:ci
       - run:
@@ -21,15 +21,6 @@ jobs:
       - run:
         name: Publishing to npm registry
         command: npm publish
-  test:
-    docker:
-      - image: circleci/node:10
-    steps:
-      - checkout
-      - run:
-        name: Installing dependencies
-        command: npm i
-      
 
 workflows:
   build_and_test:
