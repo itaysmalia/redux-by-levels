@@ -1,7 +1,7 @@
 {
   "name": "redux-by-levels",
   "homepage": "http://itaysmalia.github.io/redux-by-levels-docs",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Manage redux state with levels",
   "author": "itaysmalia",
   "license": "MIT",
