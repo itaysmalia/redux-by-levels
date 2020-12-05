@@ -69,13 +69,13 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
-          requires: 
+                - main
+          requires:
             - test
       - build_and_deploy:
           filters:
             branches:
               only:
-                - master
+                - main
           requires:
             - build
