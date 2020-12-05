@@ -1,12 +1,13 @@
 version: 2.1
 
 jobs:
-  build:
+  build_and_publish:
     docker:
       - image: node
     steps:
       - checkout
       - run: echo "this is the build job"
+      - run: npm i
       - run: npm run build:js
       - run: npm publish
   test:
@@ -15,10 +16,11 @@ jobs:
     steps:
       - checkout
       - run: echo "this is the test job"
+      - run: npm i
       - run: npm run test:ci
 
 workflows:
   build_and_test:
     jobs:
       - test
-      - build
+      - build_and_publish
