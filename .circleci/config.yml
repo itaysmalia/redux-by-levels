@@ -70,7 +70,8 @@ workflows:
             branches:
               ignore:
                 - master
-          requires: test
+          requires: 
+            - test
       - build_and_deploy:
           filters:
             branches:
