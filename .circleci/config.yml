@@ -15,17 +15,12 @@ jobs:
       - run:
           name: Running tests
           command: yarn test:ci
-
   build:
     docker:
       - image: circleci/node:10
     environment:
       HUSKY: 0
     working_directory: ~/repo
-    filters:
-      branches:
-        ignore:
-          - master
     steps:
       - checkout
       - run:
@@ -46,10 +41,6 @@ jobs:
     environment:
       HUSKY: 0
     working_directory: ~/repo
-    filters:
-      branches:
-        only:
-          - master
     steps:
       - checkout
       - run:
@@ -75,6 +66,15 @@ workflows:
     jobs:
       - test
       - build:
+          filters:
+            branches:
+              ignore:
+                - master
           requires: test
       - build_and_deploy:
-          requires: build
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
