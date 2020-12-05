@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
@@ -19,6 +20,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
@@ -34,7 +36,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish package
-          command: cat ~/repo/.npmrc && npm publish
+          command: npm publish
 
 workflows:
   build_and_test:
