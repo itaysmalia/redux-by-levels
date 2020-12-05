@@ -1,26 +1,37 @@
 version: 2.1
 
 jobs:
-  build_and_publish:
+  test_build_and_publish:
     docker:
-      - image: node
+      - image: circleci/node:10
     steps:
       - checkout
-      - run: echo "this is the build job"
-      - run: npm i
-      - run: npm run build:js
-      - run: npm publish
+      - run:
+        name: Installing dependencies
+        command: npm i
+       - run:
+        name: Running tests
+        command: npm run test:ci
+      - run:
+        name: Building dist and types directory
+        command: npm run build:js
+      - run:
+        name: Authenticate with registry
+        command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+        name: Publishing to npm registry
+        command: npm publish
   test:
     docker:
-      - image: node
+      - image: circleci/node:10
     steps:
       - checkout
-      - run: echo "this is the test job"
-      - run: npm i
-      - run: npm run test:ci
+      - run:
+        name: Installing dependencies
+        command: npm i
+      
 
 workflows:
   build_and_test:
     jobs:
-      - test
-      - build_and_publish
+      - test_build_and_publish
