@@ -7,33 +7,33 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Installing dependencies
-        command: npm i
+          name: Installing dependencies
+          command: npm i
       - run:
-        name: Running tests
-        command: npm run test:ci
+          name: Running tests
+          command: npm run test:ci
   build_and_deploy:
     docker:
       - image: circleci/node:10
     steps:
       - checkout
       - run:
-        name: Installing dependencies
-        command: npm i
+          name: Installing dependencies
+          command: npm i
       - run:
-        name: building dist and types directories
-        command: npm run build:js
+          name: building dist and types directories
+          command: npm run build:js
       - run:
-        name: Authenticate with registry
-        command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
-        name: Publishing to npm registry
-        command: npm publish
+          name: Publishing to npm registry
+          command: npm publish
 
 workflows:
   build_and_test:
     jobs:
       - test
       - build_and_deploy:
-        requires:
-          - test
+          requires:
+            - test
