@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
+      max_old_space_size: 8192
     working_directory: ~/repo
     steps:
       - checkout
@@ -20,6 +21,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
+      max_old_space_size: 8192
     working_directory: ~/repo
     steps:
       - checkout
@@ -40,6 +42,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
+      max_old_space_size: 8192
     working_directory: ~/repo
     steps:
       - checkout
@@ -69,13 +72,13 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
-          requires: 
+                - main
+          requires:
             - test
       - build_and_deploy:
           filters:
             branches:
               only:
-                - master
+                - main
           requires:
             - build
