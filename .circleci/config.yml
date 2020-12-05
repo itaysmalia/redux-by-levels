@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node@latest
+      - image: circleci/node@3.0.0
     steps:
       - checkout
       - run: echo "this is the build job"
@@ -11,7 +11,7 @@ jobs:
       - run: npm publish
   test:
     docker:
-      - image: circleci/node@latest
+      - image: circleci/node@3.0.0
     steps:
       - checkout
       - run: echo "this is the test job"
