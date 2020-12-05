@@ -8,10 +8,10 @@ jobs:
       - checkout
       - run:
           name: Installing dependencies
-          command: npm i
+          command: yarn
       - run:
           name: Running tests
-          command: npm run test:ci
+          command: yarn test:ci
   build_and_deploy:
     docker:
       - image: circleci/node:10
@@ -19,10 +19,10 @@ jobs:
       - checkout
       - run:
           name: Installing dependencies
-          command: npm i
+          command: yarn
       - run:
           name: building dist and types directories
-          command: npm run build:js
+          command: yarn build:js
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
