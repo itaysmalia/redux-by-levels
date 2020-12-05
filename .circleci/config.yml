@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: Installing dependencies
-          command: yarn
+          command: yarn install --ignore-scripts
       - run:
           name: Running tests
           command: yarn test:ci
@@ -23,7 +23,7 @@ jobs:
       - checkout
       - run:
           name: Installing dependencies
-          command: yarn
+          command: yarn install --ignore-scripts
       - run:
           name: building dist and types directories
           command: yarn build:js
