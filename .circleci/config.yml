@@ -34,7 +34,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Check if can publish to npm
-          command: can-npm-publish --verbose
+          command: npx can-npm-publish --verbose
   build_and_deploy:
     docker:
       - image: circleci/node:10
@@ -56,7 +56,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Check if can publish to npm
-          command: can-npm-publish --verbose
+          command: npx can-npm-publish --verbose
       - run:
           name: Publish package
           command: npm publish
