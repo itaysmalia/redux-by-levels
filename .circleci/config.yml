@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
-      max_old_space_size: 8192
+      NODE_OPTION: --max_old_space_size=8192
     working_directory: ~/repo
     steps:
       - checkout
@@ -21,7 +21,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
-      max_old_space_size: 8192
+      NODE_OPTION: --max_old_space_size=8192
     working_directory: ~/repo
     steps:
       - checkout
@@ -42,7 +42,7 @@ jobs:
       - image: circleci/node:10
     environment:
       HUSKY: 0
-      max_old_space_size: 8192
+      NODE_OPTION: --max_old_space_size=8192
     working_directory: ~/repo
     steps:
       - checkout
