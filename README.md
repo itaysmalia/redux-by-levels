@@ -12,7 +12,10 @@
 ```bash
 npm i redux react-redux redux-by-levels
 ```
-
+## Quick start
+```bash
+npx create-react-app --template redux-by-levels
+```
 ## Usage
 ### full docs at [docs.md](https://github.com/itaysmalia/redux-by-levels/blob/master/docs.md)
 ```jsx
