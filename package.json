@@ -18,7 +18,8 @@
     "start": "babel src --watch --out-dir dist",
     "build": "npm run test:ci && npm run build:js",
     "test": "jest --watchAll=true --env=jest-environment-jsdom-sixteen --rootDir src",
-    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src"
+    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src",
+    "test:ci:coverage": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src --coverage=true"
   },
   "husky": {
     "hooks": {

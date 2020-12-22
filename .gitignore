@@ -1,14 +1,12 @@
-
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # dependencies
 **/node_modules
-**/package-lock.json
-**/yarn.lock
 **/types
+
 # builds
 **/build
 **/dist
+src/coverage
+./.nyc*/**/*
 .rpt2_cache
 
 # misc
