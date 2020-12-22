@@ -1,7 +1,7 @@
 {
   "name": "redux-by-levels",
   "homepage": "http://itaysmalia.github.io/redux-by-levels-docs",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Manage redux state with levels",
   "author": "itaysmalia",
   "license": "MIT",
@@ -18,7 +18,8 @@
     "start": "babel src --watch --out-dir dist",
     "build": "npm run test:ci && npm run build:js",
     "test": "jest --watchAll=true --env=jest-environment-jsdom-sixteen --rootDir src",
-    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src"
+    "test:ci": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src",
+    "test:ci:coverage": "jest --watchAll=false --env=jest-environment-jsdom-sixteen --rootDir src --coverage=true"
   },
   "husky": {
     "hooks": {
